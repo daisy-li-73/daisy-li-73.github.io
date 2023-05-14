@@ -7,24 +7,36 @@
 a{
   text-decoration: none;
 }
+
+.container {
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 90%;
+  justify-content: space-evenly;
+}
+
 .hero{
+  display: flex;
   width: 100%;
   height: 100vh;
-  background: url(img/bg.jpg);
-  background-size: cover;
+  position: relative;
 }
 
 .hero::before {
   content: "";
+  background-image: url(img/bg.jpg);
+  background-size: cover;
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background-color: rgba(203, 205, 229, 0.573);
+  opacity: 0.6;
 }
-
+/* ==================== NAVIGATION BAR ============================ */
 nav{
+  float: right;
   display: flex;
   background-color:#ffffff;
   justify-content: space-between;
@@ -37,7 +49,6 @@ nav ul li{
   display: inline-block;
   padding: 10px 20px;
   position: relative;
-  align-self: right;
 }
 nav ul li a{
   color: #000000;
@@ -63,10 +74,12 @@ nav ul li a:hover:after{
   width: 100%;
   position: relative;
 }
+
+/* ==================== BUTTONS ============================ */
+
 .btn{
   color: #fff;
   font-size: 16px;
-  text-transform: uppercase;
   letter-spacing: 2px;
   padding: 16px 40px;
   border-radius: 500px;
@@ -83,24 +96,193 @@ nav ul li a:hover:after{
   border-color: #fd4766;
   color: #fd4766;
 }
-.content{
+
+/* ==================== HOME PAGE ============================ */
+
+.home{
   position: absolute;
   top: 35%;
   left: 10%;
 }
 
-.content h1{
+.home h1{
   color: #1f1f25;
+  top: 35%;
+  left: 10%;
   font-size: 75px;
   font-weight: 900;
   line-height: 90px;
   width: 70%;
 }
 
-.content p{
+.home p{
   width: 55%;
   color: #ffffff;
   margin-top: 25px;
   margin-bottom: 30px;
+  font-size: 25px;
+  text-shadow: 1px 1px 0px #000000;
+}
+
+.content {
+  position: relative;
+}
+
+.content h1{
+  margin-top: 20px;
+  color: #1f1f25;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 90px;
+  top: 15%;
+  text-align: center;
+}
+
+/* ==================== MY CODE ============================ */
+
+.cols-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.tiles {
+  width: 30%;
+  margin: 5%;
+  height: 300px;
+  font-size: 25px;
+  letter-spacing: 1px;
+  color:#ffffff;
+  padding: 60px 40px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: all .4s ease-in-out;
+  text-align: center;
+  background-position: center;
+  background-size: 100%;
+  border: 3px solid black;
+}
+
+.tiles a {
+  display: none;
+}
+
+#TSE {
+  background-image: url(img/tse.jpg);
+}
+
+#TSE:hover {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.592), rgba(255, 255, 255, 0.25)),
+    url(img/tse.jpg);
+  background-blend-mode: opacity;
+}
+
+
+
+/* ==================== ABOUT ME ============================ */
+/* PROFILE PICTURE */
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* PLANETS */
+
+.planets {
+  width: 30%;
+  margin: 1.5%;
+  position: relative;
+  align-items: center;
+  font-size: 25px;
+  letter-spacing: 1px;
+  color:#ffffff;
+  text-shadow: 2px 2px 0px #080808; 
+  padding: 60px 40px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all .4s ease-in-out;
+  text-align: center;
+  background-position: center;
+  background-size: 100%;
+}
+
+#earth {
+  margin-top: 125px;
+  width: 150px;
+  height: 150px;
+  background-image: url(img/earth.jpg);
+}
+
+#neptune {
+  margin-top: 65px;
+  width: 220px;
+  height: 220px;
+  background-image: url(img/neptune.jpg);
+}
+
+#jupiter {
+  margin-top: 10px;
+  width: 275px;
+  height: 275px;
+  background-image: url(img/jupiter.jpg);
+}
+
+/* HOVER TRANSITIONS */
+.planets:hover {
+  border: 4px solid white;
+  text-shadow: none;
   font-size: 20px;
+  color: black
+}
+
+.planets .fact {
+  display: none;
+}
+
+.planets .prompt {
+  display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.planets:hover .fact {
+  display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.planets:hover .prompt {
+  display: none;
+}
+
+#earth:hover {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.592), rgba(255, 255, 255, 0.6)),
+    url(img/earth.jpg);
+  background-blend-mode: opacity;
+}
+
+#neptune:hover {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.392), rgba(255, 255, 255, 0.416)),
+    url(img/neptune.jpg);
+  background-blend-mode: opacity;
+}
+
+#jupiter:hover {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.392), rgba(255, 255, 255, 0.416)),
+    url(img/jupiter.jpg);
+  background-blend-mode: opacity;
 }
