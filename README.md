@@ -1,3 +1,3 @@
-### WEBPAGE LINK: https://daisy-li-73.github.io/
+### WEBPAGE LINK: https://daisyli73.me
 
 A personal website for Daisy Li.
