@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,300&display=swap" rel="stylesheet">
+    <title>Daisy Li</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="vcs-initialized">
+  <header>
+    <nav>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutme.html">About</a></li>
+          <li><a href="mycode.html">Works</a></li>
+          <li><a href="contactme.html">Contact</a></li>
+      </ul>
+  </nav>
+  </header>
+  <div class="hero container">
+    <div class="content container">
+      <h1>Contact Me</h1>
+      <div class="contact">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message"placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    </div>
+  </div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail() {
+      Email.send({
+          SecureToken: "e25101e7-48e1-4bb3-af9e-739e6349d9ff",
+          To : 'daisy.li.26@dartmouth.edu',
+          From : "daisy.li.26@dartmouth.edu",
+          ReplyTo: document.getElementById("email").value,
+          Subject : "New Contact Form Message",
+          Body : "Name: " + document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Message: " + document.getElementById("message").value
+      }).then(
+        message => alert("Message sent successfully")
+      );
+    }
+  </script>
+</body>
+</html>

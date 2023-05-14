@@ -8,6 +8,10 @@ a{
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .container {
   margin: 0 auto;
   padding-left: 10px;
@@ -34,6 +38,7 @@ a{
   left: 0px;
   opacity: 0.6;
 }
+
 /* ==================== NAVIGATION BAR ============================ */
 nav{
   float: right;
@@ -88,12 +93,12 @@ nav ul li a:hover:after{
   transition: all .4s ease-in-out;
   background-size: 152% 100%;
   background: #fd4766;
-  border: 2px solid #fd4766;
   position: relative;
+  border: 2px solid #fd4766;
 }
+
 .btn:hover{
   background: white;
-  border-color: #fd4766;
   color: #fd4766;
 }
 
@@ -150,31 +155,54 @@ nav ul li a:hover:after{
   width: 30%;
   margin: 5%;
   height: 300px;
-  font-size: 25px;
-  letter-spacing: 1px;
-  color:#ffffff;
   padding: 60px 40px;
   border-radius: 10px;
   display: inline-block;
   transition: all .4s ease-in-out;
   text-align: center;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color:#ffffff;
+  text-shadow: 2px 2px 2px #080808; 
   background-position: center;
   background-size: 100%;
   border: 3px solid black;
 }
 
 .tiles a {
-  display: none;
+  color: white;
+}
+
+.tiles:hover {
+  border: 5px solid white;
+  color: black;
+  font-size: 35px;
+  text-shadow: none;
+}
+
+.tiles:hover a {
+  color: black;
 }
 
 #TSE {
   background-image: url(img/tse.jpg);
 }
 
+#enrollBot {
+  background-image: url(img/enroll.jpg);
+}
+
 #TSE:hover {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.592), rgba(255, 255, 255, 0.25)),
+    linear-gradient(rgba(255, 255, 255, 0.592), rgba(255, 255, 255, 0.75)),
     url(img/tse.jpg);
+  background-blend-mode: opacity;
+}
+
+#enrollBot:hover {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.592), rgba(255, 255, 255, 0.75)),
+    url(img/enroll.jpg);
   background-blend-mode: opacity;
 }
 
@@ -285,4 +313,24 @@ nav ul li a:hover:after{
     linear-gradient(rgba(255, 255, 255, 0.392), rgba(255, 255, 255, 0.416)),
     url(img/jupiter.jpg);
   background-blend-mode: opacity;
+}
+
+/* ==================== CONTACT ME ============================ */
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #fd4766;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid white;
 }
